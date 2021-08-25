@@ -67,7 +67,7 @@
               <a href={% url 'course-list' %}  {% if request.path == "/courses/" or request.path == "/course/<str:pk>/" %}class= "active" {%endif%}>Courses</a>
             </li>
             <li>
-              <a href="contact-us.html"  {% if request.path == "" %}class= "active" {%endif%}>competitions</a>
+              <a href={%url 'competition-list'%}  {% if request.path == "/competitions/" %}class= "active" {%endif%}>competitions</a>
             </li>
              <li>
               <a href={% url 'gallery' %}  {% if request.path == "/gallery/" %}class= "active" {%endif%}>Gallery</a>

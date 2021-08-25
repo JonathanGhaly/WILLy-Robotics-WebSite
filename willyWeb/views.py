@@ -29,6 +29,9 @@ def courses(request):
     context = Courses.objects.all()
     return render(request, 'willyWeb/courses-list.html', {'courses': context})
 
+def competition(request):
+    context = Competition.objects.all()
+    return render(request, 'willyWeb/competition-list.html', {'competitions': context})
 
 def gallery(request):
     img = Gallery.objects.all()
@@ -45,6 +48,9 @@ def singleCourse(request, pk):
     course = Courses.objects.get(id=pk)
     return render(request, 'willyWeb/courses-single-item.html', {'course': course})
 
+def singleComp(request, pk):
+    comp = Competition.objects.get(id=pk)
+    return render(request, 'willyWeb/competiton-single-item.html', {'competition': comp})
 
 def RegistrationCourse(request):
     form = RegisterationForm
