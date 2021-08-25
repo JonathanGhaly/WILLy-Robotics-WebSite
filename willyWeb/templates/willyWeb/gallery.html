@@ -1,0 +1,22 @@
+{% extends 'willyWeb/base.html' %} {%load static%} {% block content %}
+<div class="page-content grid-row">
+  <div class="portfolio-gallery">
+    <div class="grid-col-row clear-fix">
+    
+      {% for image in gallery %}
+      <div class="grid-col grid-col-4 item">
+        <div class="picture">
+          <div class="hover-effect"></div>
+          <div class="link-cont">
+            <a href="{{image.img.url}}" class="fancy fa fa-search"></a>
+            <a href="#" class="cws-right fa fa-heart"></a>
+          </div>
+          <img src="{{image.img.url}}" data-at2x="{{image.img.url}}" alt />
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content%}

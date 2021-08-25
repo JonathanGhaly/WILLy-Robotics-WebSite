@@ -1,0 +1,96 @@
+{% extends 'willyWeb/admin-home.html' %} {% block content %}
+<div class="page-content">
+  <div class="container clear-fix form-bg">
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-9" style="width: 100%">
+        <h2>Courses Table</h2>
+        <table style="border-collapse: collapse; width: 100%">
+          <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Course name
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Minimum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Maximum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Price
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date created
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Teacher
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status
+            </th>
+          </tr>
+          {% for course in courses %}
+
+          <tr>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.name}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.min_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.max_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.price}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.date_created}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.teacher.name}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.status}}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

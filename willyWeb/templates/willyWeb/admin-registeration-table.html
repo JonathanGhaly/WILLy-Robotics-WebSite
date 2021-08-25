@@ -1,0 +1,107 @@
+{% extends 'willyWeb/admin-home.html' %} {% block content %}
+<div class="page-content">
+  <div class="container clear-fix form-bg">
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-9" style="width: 100%">
+        <h2>Registeration Table</h2>
+        <table style="border-collapse: collapse; width: 100%">
+          <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Full name
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date of Birth
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Phone Number
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Secondary Phone Number
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Course
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              mail
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              City
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status
+            </th>
+          </tr>
+          {% for registeration in registerations %}
+
+          <tr>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.full_name}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.birth_date}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.phone_number}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.secondary_phone_number}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.course.name}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.mail}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.city}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.status}}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
