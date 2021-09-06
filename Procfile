@@ -1,1 +1,1 @@
-web: gunicorn WillyRoboticsAcademy.wsgi 
+web: gunicorn WillyRoboticsAcademy.wsgi --log-file -
