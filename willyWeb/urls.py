@@ -17,14 +17,20 @@ urlpatterns = [
     path('coursetable',views.CoursesTable,name='coursetable'),
     path('add_course/', views.AddCourse, name='add-course'),
     path('add_image/', views.AddImageGal, name='add-image'),
+    path('add_competition/', views.AddCompetition, name='add-competition'),
+    path('delete-course/<str:pk>/', views.DeleteCourse, name="delete-course"),
+    path('student-course/<str:pk>/', views.RegisterSingleView, name="student-course"),
+    path('student-competition/<str:pk>/', views.RegisterCompSingleView, name="student-competition"),
 
+    path('delete-competition/<str:pk>/', views.DeleteComp, name="delete-comp"),
 
 #######################################################################
 #Course pages
     path('courses/', views.courses, name='course-list'),
     path('course/<str:pk>/', views.singleCourse, name="course"),
     path('competitons/', views.competition, name='competition-list'),
-    path('competiton/<str:pk>/', views.singleComp, name="competition"),
+    path('competition/<str:pk>/', views.singleComp, name="competition"),
+    path('RegisterationCompetition/<str:pk>', views.RegistrationCompetition, name='Apply-comp'),
 ########################################################################
 #Registration course
     path('Registeration/', views.RegistrationCourse, name='Apply'),

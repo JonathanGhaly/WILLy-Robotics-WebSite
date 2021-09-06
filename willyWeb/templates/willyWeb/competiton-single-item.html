@@ -29,6 +29,10 @@
                   Entery Requirements
                 </div>
                 <div class="tabs-btn" data-tabs-id="tabs3">Apply</div>
+                 {% if request.user.is_superuser %}
+                <div class="tabs-btn" data-tabs-id="tabs4">Edit</div>
+                <div class="tabs-btn" data-tabs-id="tabs5">Delete</div>
+                {% endif %}
               </div>
               <!-- tabs keeper -->
               <div class="tabs-keeper">
@@ -65,10 +69,42 @@
                   <h3>Apply</h3>
                   <div class="columns-row">
                     <div class="columns-col columns-col-6">
-						<a href = {% url 'Apply-pk' competition.id %} style="background-color : #dc3545; border-color:#dc3545; color:#fff; padding:10px">Apply now</a>
+						<a href = {% url 'Apply-comp' competition.id %} style="margin-top:10px;"
+                           class="cws-button bt-color-2 border-radius alt icon-right">Apply now</a>
                     </div>
                   </div>
                 </div>
+                  <!-- tabs container -->
+                {%if request.user.is_superuser%}
+                <div class="container-tabs" data-tabs-id="cont-tabs4">
+                  <h3>Edit</h3>
+                  <div class="columns-row">
+                    <div class="columns-col columns-col-6">
+                      <form action="" method="POST" enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        {{form}}
+                        <input type="submit" name="Submit"
+                          style="margin-top:10px;"
+                           class="cws-button bt-color-4 border-radius alt icon-right">
+                      </form>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="container-tabs" data-tabs-id="cont-tabs5">
+                  <h3>Delete</h3>
+                  <div class="columns-row">
+                    <div class="columns-col columns-col-6">
+                      <a href={% url 'delete-comp' competition.id %}
+                        sstyle="margin-top:10px;"
+                           class="cws-button bt-color-1 border-radius alt icon-right">Delete</a>
+                    </div>
+
+                  </div>
+
+                </div>
+                {% endif %}
                 <!--/tabs container -->
               </div>
               <!--/tabs keeper -->
@@ -84,4 +120,6 @@
   </div>
 </div>
 <!-- / content -->
+  <hr class="divider-color" />
+
 {% endblock content %}

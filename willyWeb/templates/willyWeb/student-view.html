@@ -1,0 +1,126 @@
+{% extends 'willyWeb/admin-home.html' %} 
+{% block content %}
+    <div class="page-content"  >
+    <div class="container clear-fix form-bg" >
+        <div class="grid-col-row">
+        <div class="grid-col grid-col-9" > 
+        <table style="border-collapse: collapse; width: 100%">
+            <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Full name: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.full_name}}
+            </td>
+            </tr>
+            <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Birth date: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.birth_date}}
+            </td>
+            </tr>
+            <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              City: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.city}}
+            </td>
+            </tr>
+            <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Phone number: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.phone_number}}
+            </td>
+            </tr>
+            <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Secondary phone number: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.secondary_phone_number}}
+            </td>
+            </tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Course: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.course}}
+            </td>
+            </tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Email: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.mail}}
+            </td>
+            </tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date of registration: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            {{student.date_created}}
+            </td>
+            </tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status: 
+            </th>
+            <td
+             style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+             <form action="" method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}            
+            {{form.status}}
+            </td>
+            <td>
+            <input type="submit" name = "Submit" style="background-color : #0d6efd; border-color:#0d6efd; color:#fff; padding:10px; margin-top:10px;">
+
+        </form>
+            </tr>
+        </table>
+
+
+       
+        </div>
+        </div>
+        </div>
+        </div>
+{% endblock content %}

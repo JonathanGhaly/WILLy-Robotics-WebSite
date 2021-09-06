@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8$=csfl9^r1o+8m+a%u_nwoa-vwavug8cczq15d8=aewcgb80x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['willyroboticsacademy.herokuapp.com','127.0.0.1']
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'WillyRoboticsAcademy.urls'
 
@@ -143,3 +146,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images') #######
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #SMTP config
+
+
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIAXOSXXBH2RBU3HLHX'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'wra-bucket'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

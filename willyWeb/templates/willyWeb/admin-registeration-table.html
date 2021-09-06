@@ -41,6 +41,11 @@
             >
               City
             </th>
+              <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date of Registeration
+            </th>
             <th
               style="border: 1px solid #dddddd; text-align: left; padding: 8px"
             >
@@ -53,7 +58,8 @@
             <td
               style="border: 1px solid #dddddd; text-align: left; padding: 8px"
             >
-              {{registeration.full_name}}
+            <a href = "{% url 'student-course' registeration.id %}">
+              {{registeration.full_name}}</a>
             </td>
 
             <td
@@ -91,7 +97,11 @@
             >
               {{registeration.city}}
             </td>
-
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.date_created|date:'Y-m-d : H:i' }}
+            </td>
             <td
               style="border: 1px solid #dddddd; text-align: left; padding: 8px"
             >
@@ -101,6 +111,117 @@
           {% endfor %}
         </table>
       </div>
+      <div class="grid-col grid-col-9" style="width: 100%; margin-top:20px;">
+        <h2>Registeration Competition Table</h2>
+        <table style="border-collapse: collapse; width: 100%">
+          <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Full name
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date of Birth
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Phone Number
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Secondary Phone Number
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Course
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              mail
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              City
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date of Registeration
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status
+            </th>
+
+          </tr>
+          {% for registeration in competitions %}
+
+          <tr>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+            <a href = "{% url 'student-competition' registeration.id %}">
+              {{registeration.full_name}}</a>
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.birth_date}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.phone_number}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.secondary_phone_number}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.competition.name}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.mail}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.city}}
+            </td>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.date_created|date:'Y-m-d : H:i' }}
+            </td>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{registeration.status}}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      
     </div>
   </div>
 </div>

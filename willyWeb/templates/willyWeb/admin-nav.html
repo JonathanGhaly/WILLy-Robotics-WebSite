@@ -23,14 +23,12 @@
               <a href={% url 'add-course' %} {% if request.path == "/add_course/" %}class="active"{% endif %}>Add course</a>
             </li>
                 <li>
-              <a href={% url 'Apply' %} {% if request.path == "/" %}class="active"{% endif %}>Add event</a>
+              <a href={% url 'add-competition' %} {% if request.path == "/add_competition/" %}class="active"{% endif %}>Add competition</a>
             </li>
             <li>
               <a href={% url 'add-image' %} {% if request.path == "/add_image/" %}class="active"{% endif %}>Gallery</a>
             </li>
-             <li>
-              <a href={% url 'Apply' %} {% if request.path == "/" %}class="active"{% endif %}>Create new account</a>
-            </li>
+          
             <li>
               <span style="padding-left: 20px;">Hello, {{request.user}}</span>
             </li>

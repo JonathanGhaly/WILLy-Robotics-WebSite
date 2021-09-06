@@ -4,23 +4,21 @@
 
   <div class="grid-row-footer">
     <div class="grid-col-row clear-fix">
-      <section class="grid-col grid-col-4 footer-about">
+      <section class="grid-col grid-col-8 footer-about">
         <h2 class="corner-radius">About Us</h2>
         <div>
-          <h3>Sed aliquet dui auctor blandit ipsum tincidunt</h3>
+          <h3>What we offer</h3>
           <p>
-            Quis rhoncus lorem dolor eu sem. Aenean enim risus, convallis id
-            ultrices eget.
+            Willy Robotics offers a range of Stem robotics courses for students we train the next generation of scientists, engineers, designers, innovative builders and entrepreneurs.
           </p>
         </div>
         <address>
           <p></p>
           <a href="tel:+201210875133" class="phone-number">+201210875133</a>
           <br />
-          <a href="mailto:uni@domain.com" class="email">uni@domain.com</a>
+          <a href="mailto:willyroboticsacademy@gmail.com" class="email">willyroboticsacademy@gmail.com</a>
           <br />
-          <a href="www.sample.com" class="site">www.sample.com</a>
-          <br />
+         
           <a
             href="https://www.google.com/maps/dir//Willy+Robotics+Academy,+Unnamed+Road,+Giza+Governorate/@29.9657567,31.0894066,17z/data=!4m16!1m6!3m5!1s0x14584f0c61df7573:0x1f8b9f5cda60152f!2sWilly+Robotics+Academy!8m2!3d29.9657521!4d31.0916006!4m8!1m0!1m5!1m1!1s0x14584f0c61df7573:0x1f8b9f5cda60152f!2m2!1d31.0916006!2d29.9657521!3e3"
             class="address"
@@ -36,47 +34,11 @@
             href="https://www.instagram.com/willy_robotics_academy/"
             class="fa fa-instagram"
           ></a>
-          <a href="" class="fa fa-google-plus"></a>
           <a
             href="https://www.youtube.com/channel/UCmwihA0n1uaUEQtYS70crDg"
             class="fa fa-youtube"
           ></a>
         </div>
-      </section>
-      <section class="grid-col grid-col-4 footer-latest">
-        <h2 class="corner-radius">Latest courses</h2>
-        <article>
-          <img
-            src="http://placehold.it/83x83"
-            data-at2x="http://placehold.it/83x83"
-            alt
-          />
-          <h3>Sed aliquet dui at auctor blandit</h3>
-          <div class="course-date">
-            <div>10<sup>00</sup></div>
-            <div>23.02.15</div>
-          </div>
-          <p>
-            Sed pharetra lorem ut dolor dignissim, sit amet pretium tortor
-            mattis.
-          </p>
-        </article>
-        <article>
-          <img
-            src="http://placehold.it/83x83"
-            data-at2x="http://placehold.it/83x83"
-            alt
-          />
-          <h3>Sed aliquet dui at auctor blandit</h3>
-          <div class="course-date">
-            <div>10<sup>00</sup></div>
-            <div>23.02.15</div>
-          </div>
-          <p>
-            Sed pharetra lorem ut dolor dignissim, sit amet pretium tortor
-            mattis.
-          </p>
-        </article>
       </section>
     </div>
   </div>
@@ -95,7 +57,7 @@
               <a href={% url 'course-list' %} >Courses</a>
             </li>
             <li>
-              <a href="contact-us.html" >competitions</a>
+              <a href={% url 'competition-list' %} >competitions</a>
             </li>
              <li>
               <a href={% url 'gallery' %} >Gallery</a>

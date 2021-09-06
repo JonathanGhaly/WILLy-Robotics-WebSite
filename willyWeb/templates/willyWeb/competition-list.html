@@ -13,6 +13,7 @@
         
           <!-- item -->
           {% for competition in competitions %}
+          {% if competition.status != "Not Available" %}
           <div class="category-item list clear-fix">
             <div class="picture" >
               <div class="hover-effect"></div>
@@ -52,6 +53,7 @@
               </div>
             </div>
           </div>
+          {% endif %}
           <!-- / item -->
           {% endfor %}
         </main>
