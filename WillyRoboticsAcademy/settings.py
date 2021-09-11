@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'WillyRoboticsAcademy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : "WRA_1", 
-        'USER' :"john",
-        'PASSWORD' : "Johnjojo12",
-        'HOST': "database-1.cusgtupfvyft.eu-west-3.rds.amazonaws.com",
-        'PORT' : "5432",
+        'NAME' : "#", 
+        'USER' :"#",
+        'PASSWORD' : "#",
+        'HOST': "#",
+        'PORT' : "#",
     }
 }
 
