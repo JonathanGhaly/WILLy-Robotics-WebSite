@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv('.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -81,11 +83,11 @@ WSGI_APPLICATION = 'WillyRoboticsAcademy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : "WRA_1", 
-        'USER' :"john",
-        'PASSWORD' : "Johnjojo12",
-        'HOST': "database-1.cusgtupfvyft.eu-west-3.rds.amazonaws.com",
-        'PORT' : "5432",
+        'NAME' : os.getenv("NAME"), 
+        'USER' :os.getenv("USER"),
+        'PASSWORD' : os.getenv("PASSWORD"),
+        'HOST': os.getenv("HOST"),
+        'PORT' : os.getenv("PORT"),
     }
 }
 
@@ -151,8 +153,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #S3 BUCKETS CONFIG
 
-AWS_ACCESS_KEY_ID = 'AKIAXOSXXBH2RBU3HLHX'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY =  os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = 'wra-bucket'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
