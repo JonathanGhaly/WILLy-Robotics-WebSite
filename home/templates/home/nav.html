@@ -1,0 +1,55 @@
+{%load static%}
+<!-- page header -->
+<header class="only-color">
+  <!-- header top panel -->
+  <div class="page-header-top">
+    <div class="grid-row clear-fix">
+      <address>
+        <a href="tel:+201210875133" class="phone-number"
+          ><i class="fa fa-phone"></i>+201210875133</a
+        >
+        <a href="mailto:willyroboticsacademy@gmail.com" class="email"
+          ><i class="fa fa-envelope-o"></i>willyroboticsacademy@gmail.com</a
+        >
+      </address>
+      <div class="header-top-panel">
+        
+      </div>
+    </div>
+  </div>
+  <!-- / header top panel -->
+  <!-- sticky menu -->
+  <div class="sticky-wrapper" >
+    <div class="sticky-menu">
+      <div class="grid-row clear-fix">
+        <!-- logo -->
+        <a href={% url 'home' %} class="logo">
+          <img src={% static 'home/img/Main__Logo.png' %} data-at2x={%static 'home/img/Main__Logo.png' %} alt = logo>
+          <h1>WillyRoboticsAcademy</h1>
+        </a>
+        <!-- / logo -->
+        <nav class="main-nav">
+          <ul class="clear-fix">
+            <li>
+              <a href={% url 'home' %}  {% if request.path == "/" %}class= "active" {%endif%}>Home</a>
+            </li>
+            <li>
+              <a href={% url 'course-list' %}  {% if request.path == "/courses/" or request.path == "/course/<str:pk>/" %}class= "active" {%endif%}>Courses</a>
+            </li>
+            <li>
+              <a href={%url 'competition-list'%}  {% if request.path == "/competitons/" %}class= "active" {%endif%}>competitions</a>
+            </li>
+             <li>
+              <a href={% url 'gallery' %}  {% if request.path == "/gallery/" %}class= "active" {%endif%}>Gallery</a>
+            </li>
+            <li>
+              <a href={% url 'Apply' %}  {% if request.path == "/Registeration/" or request.path == "/Registeration/<str:pk>" %}class= "active" {%endif%}>Apply now</a>
+            </li>
+ 
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- sticky menu -->
+</header>

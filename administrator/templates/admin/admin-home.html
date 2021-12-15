@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>WillyRoboicsAcademy</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<!-- style -->
+	<link rel="shortcut icon" href={% static 'home/img/i01_Main__Logo.png' %}>
+	<link rel="stylesheet" href={% static 'home/css/font-awesome.css' %}>
+	<link rel="stylesheet" href={% static 'home/css/form.css' %}>
+	<link rel="stylesheet" href={% static 'home/fi/flaticon.css' %}>
+	<link rel="stylesheet" href={% static 'home/css/main.css' %}>
+	<link rel="stylesheet" type="text/css" href="tuner/css/colorpicker.css" />
+	<link rel="stylesheet" type="text/css" href="tuner/css/styles.css" />
+	<link rel="stylesheet" type="text/css" href={% static 'home/css/jquery.fancybox.css' %}/>
+	<link rel="stylesheet" href= {% static 'home/css/owl.carousel.css' %}>
+	<link rel="stylesheet" type="text/css" href={% static 'home/rs-plugin/css/settings.css' %} media="screen">
+	<link rel="stylesheet" href={% static 'home/css/animate.css' %}>
+	<!--styles -->
+</head>
+<body>
+			{% include 'admin/admin-nav.html'%}
+            {% block content %} {% endblock %}
+	<script src={% static 'home/js/jquery.min.js' %}></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox_packed.js"></script>
+	<script type='text/javascript' src={% static 'home/js/jquery.validate.min.js' %}></script>
+	<script src={% static 'home/js/jquery.form.min.js' %}></script>
+	<script src={% static 'home/js/TweenMax.min.js' %}></script>
+	<script src={% static 'home/js/main.js' %}></script>
+	<!-- jQuery REVOLUTION Slider  -->
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/jquery.themepunch.tools.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/jquery.themepunch.revolution.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.video.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.slideanims.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.actions.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.kenburn.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.navigation.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.migration.min.js' %}></script>
+	<script type="text/javascript" src={% static 'home/rs-plugin/js/extensions/revolution.extension.parallax.min.js' %}></script>
+	<script src={% static 'home/js/jquery.isotope.min.js' %}></script>
+
+	<script src={% static 'home/js/jquery.isotope.min.js' %}></script>
+	<script src={% static 'home/js/jquery-ui.min.js' %}></script>
+	<script src={% static 'home/js/jflickrfeed.min.js' %}></script>
+	<script src={% static 'home/js/jquery.tweet.js' %}></script>
+
+	<script src={% static 'home/js/jquery.fancybox.pack.js' %}></script>
+	<script src={% static 'home/js/jquery.fancybox-media.js' %}></script>
+	<script src={% static 'home/js/retina.min.js' %}></script>
+</body>
+</html>

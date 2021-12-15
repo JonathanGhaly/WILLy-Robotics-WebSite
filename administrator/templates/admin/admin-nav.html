@@ -1,0 +1,44 @@
+{%load static%}
+<!-- page header -->
+<header class="only-color">
+  <!-- sticky menu -->
+  <div class="sticky-wrapper" style='height:auto;'>
+    <div class="sticky-menu">
+      <div class="grid-row clear-fix">
+        <!-- logo -->
+        <a href= {% url 'home' %} class="logo">
+          <img src={% static 'home/img/Main__Logo.png' %} data-at2x={%static 'home/img/Main__Logo.png' %} alt = logo>
+          <h1>WillyRoboticsAcademy</h1>
+        </a>
+        <!-- / logo -->
+        <nav class="main-nav">
+          <ul class="clear-fix">
+            <li>
+              <a href={% url 'table' %} {% if request.path == "/registration-admin/" %}class="active"{% endif %}>Registrations</a>
+            </li>
+            <li>
+              <a href={% url 'coursetable' %} {% if request.path == "/coursetable/" %}class="active"{% endif %}>Courses</a>
+            </li>
+             <li>
+              <a href={% url 'add-course' %} {% if request.path == "/add_course/" %}class="active"{% endif %}>Add course</a>
+            </li>
+                <li>
+              <a href={% url 'add-competition' %} {% if request.path == "/add_competition/" %}class="active"{% endif %}>Add competition</a>
+            </li>
+            <li>
+              <a href={% url 'add-image' %} {% if request.path == "/add_image/" %}class="active"{% endif %}>Gallery</a>
+            </li>
+          
+            <li>
+              <span style="padding-left: 20px;">Hello, {{request.user}}</span>
+            </li>
+            <li>
+              <a href={% url 'logout' %}>Logout</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- sticky menu -->
+</header>

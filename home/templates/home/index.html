@@ -1,0 +1,520 @@
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+
+<!-- revolution slider -->
+<div class="tp-banner-container">
+  <div class="tp-banner-slider">
+    <ul>
+      <li data-masterspeed="700">
+        <img src={% static 'home/img/Slideshow/Ev3/EV3-course-1.jpg' %} alt>
+        <div class="tp-caption sl-content align-left" data-x="['left','center','center','center']" data-hoffset="20"
+          data-y="center" data-voffset="0" data-width="['720px','600px','500px','300px']"
+          data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
+          data-start="400">
+          <div class="sl-title">Get Everything Right</div>
+          <p>
+            We aim to Increase students' interest in science education covered by STEM, by creating and enhancing
+            STEM-related curricula.
+          </p>
+          <a href={% url 'Apply' %} class="cws-button border-radius">Apply now <i
+              class="fa fa-angle-double-right"></i></a>
+        </div>
+      </li>
+      <li data-masterspeed="700">
+        <img src="{% static 'home/img/Slideshow/WEDO/Wedo-course-3.jpg'%}" data-bgposition="bottom center" alt />
+        <div class="tp-caption sl-content align-left" data-x="['center']" data-hoffset="20" data-y="center"
+          data-voffset="0" data-width="['720px','600px','500px','300px']"
+          data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
+          data-start="400">
+          <div class="sl-title">Get Everything Right</div>
+          <p>
+            We Provide opportunities for students to discover educational interests, explore their future career paths
+            and create plans for their future.
+          </p>
+          <a href={% url 'Apply' %} class="cws-button border-radius">Apply now <i
+              class="fa fa-angle-double-right"></i></a>
+        </div>
+      </li>
+
+      <li data-masterspeed="700" data-transition="fade">
+        <img src={% static 'home/img/Slideshow/Nursery/Nur-1.jpg' %} alt>
+        <div class="tp-caption sl-content align-center" data-x="right right" data-hoffset="0" data-y="top"
+          data-voffset="0" data-width="['720px','600px','500px','300px']"
+          data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
+          data-start="400" style="margin-top:50px;">
+          <div class="sl-title">Knowledge for life</div>
+          <p>
+            We Adopt an educational plan that supports student learning, well-being based on five key points:
+            Persistence, Research, Communication, Collaboration, and Creativity.
+          </p>
+          <a href={% url 'Apply' %} class="cws-button border-radius">Apply now <i
+              class="fa fa-angle-double-right"></i></a>
+        </div>
+      </li>
+      <li data-masterspeed="700">
+        <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-23.jpg' %} alt>
+        <div class="tp-caption sl-content align-left" data-x="['left','center','center','center']" data-hoffset="20"
+          data-y="top" data-voffset="0" data-width="['720px','600px','500px','300px']"
+          data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
+          data-start="400" style="margin-top:50px">
+          <div class="sl-title">Get Everything Right</div>
+          <p>
+            Willy Robotics offers a range of Stem robotics courses for students that we train the next generation of
+            scientists, engineers, designers, innovative builders and entrepreneurs.
+          </p>
+          <a href={% url 'Apply' %} class="cws-button border-radius">Apply now <i
+              class="fa fa-angle-double-right"></i></a>
+        </div>
+      </li>
+      <li data-masterspeed="700">
+        <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-1.jpg' %} alt>
+        <div class="tp-caption sl-content align-left" data-x="['left','center','center','center']" data-hoffset="20"
+          data-y="center" data-voffset="0" data-width="['720px','600px','500px','300px']"
+          data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
+          data-start="400">
+          <div class="sl-title">Get Everything Right</div>
+          <p>
+            Willy Robotics offers a range of Stem robotics courses for students we train the next generation of
+            scientists, engineers, designers, innovative builders and entrepreneurs.
+          </p>
+          <a href={% url 'Apply' %} class="cws-button border-radius">Apply now <i
+              class="fa fa-angle-double-right"></i></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- / revolution slider -->
+<hr class="divider-color" />
+<!-- content -->
+<div id="home" class="page-content padding-none">
+  <!-- section -->
+  <section class="padding-section">
+    <div class="grid-row clear-fix">
+      <h2 class="center-text">Latest Courses</h2>
+      <div class="category-item list clear-fix">
+        <div class="picture">
+          <div class="hover-effect"></div>
+          <div class="link-cont">
+            {%for course in courses%}
+            {% if forloop.first %}
+
+            <a href={% url 'course' course.id %} class="fancy fa fa-search"></a>
+          </div>
+          <img src={{ course.list_image.url}} data-at2x={{ course.list_image.url}} alt
+            style="padding-bottom: 10%; padding-top: 10%" />
+        </div>
+        <a href={% url 'course' course.id %} class="fancy">
+
+          <h3>{{course.name}}</h3>
+        </a>
+        <div>
+          <div class="star-rating" title="Rated 4.50 out of 5">
+            <span style="width: 100%"></span>
+          </div>
+          <div class="count-reviews">( reviews 10 )</div>
+        </div>
+        <p>{{course.short_description}}.</p>
+        <div class="category-info">
+          <span class="price">
+            <span class="amount"> {{course.price}}<sup>L.E</sup> </span>
+            <span class="description-price">per 1 month</span>
+          </span>
+          <div class="count-users">
+            <i class="fa fa-user"></i> 5 students
+          </div>
+        </div>
+      </div>
+      <a href={% url 'course-list' %}
+      style="margin-top:20px;"
+      class="cws-button bt-color-4 border-radius alt icon-right"> Show more
+      </a>
+
+    </div>
+    <!-- course item -->
+    <div>
+
+      {% endif %}
+      {%endfor%}
+
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- / section -->
+
+<!-- section -->
+<!-- / section -->
+<!-- paralax section -->
+<div class="parallaxed">
+  <div class="parallax-image" data-parallax-left="0.5" data-parallax-top="0.3" data-parallax-scroll-speed="0.5">
+    <img src={% static 'home/img/parallax.png' %} alt="" />
+  </div>
+  <!--Add number of course/student/Lections/events from database Monke -->
+  <div class="them-mask bg-color-1"></div>
+  <div class="grid-row">
+    <div class="grid-col-row clear-fix">
+      <div class="grid-col grid-col-3 alt">
+        <div class="counter-block">
+          <i class="flaticon-book1"></i>
+          <div class="counter" data-count="{{coursesNum}}">0</div>
+          <div class="counter-name">Courses</div>
+        </div>
+      </div>
+      <div class="grid-col grid-col-3 alt">
+        <div class="counter-block">
+          <i class="flaticon-multiple"></i>
+          <div class="counter" data-count="{{registerationNum}}">0</div>
+          <div class="counter-name">Students</div>
+        </div>
+      </div>
+      <div class="grid-col grid-col-3 alt">
+        <div class="counter-block">
+          <i class="flaticon-award"></i>
+          <div class="counter" data-count="6">0</div>
+          <div class="counter-name">Awards</div>
+        </div>
+      </div>
+      <div class="grid-col grid-col-3 alt">
+        <div class="counter-block last">
+          <i class="flaticon-calendar"></i>
+          <div class="counter" data-count="{{competitionNum}}">0</div>
+          <div class="counter-name">Competitions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="divider-color" />
+<!-- / paralax section -->
+<!-- section -->
+<section class="fullwidth-background padding-section">
+  <div class="grid-row">
+    <h2 class="center-text">How We Work</h2>
+    <!-- time line -->
+    <div class="time-line">
+      <div class="line-element">
+        <div class="action">
+          <div class="action-block">
+            <span><i class="flaticon-magnifier"></i></span>
+            <div class="text">
+              <h3>Search your course</h3>
+              <p>
+                Browse over different courses and competitions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="level">
+          <div class="level-block">Step 1</div>
+        </div>
+      </div>
+      <div class="line-element color-2">
+        <div class="level">
+          <div class="level-block">Step 2</div>
+        </div>
+        <div class="action">
+          <div class="action-block">
+            <span><i class="flaticon-computer"></i></span>
+            <div class="text">
+              <h3>Complete the Registration form</h3>
+              <p>
+                Choose the course and open the registration form then fill it
+                by the required information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line-element color-3">
+        <div class="action">
+          <div class="action-block">
+            <span><i class="flaticon-smartphone"></i></span>
+            <div class="text">
+              <h3>We will contact you</h3>
+              <p>
+                Wait for us to contact you and inform you about the approval,
+                date of start and the time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="level">
+          <div class="level-block">Step 3</div>
+        </div>
+      </div>
+    </div>
+    <!-- / time line -->
+  </div>
+</section>
+<!-- / paralax section -->
+<hr class="divider-color" />
+<!-- paralax section -->
+<section class="padding-section">
+  <div class="grid-row clear-fix">
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-6">
+        <div class="boxs-tab">
+          <div class="animated fadeIn active" data-box="1">
+            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} alt />
+          </div>
+          <div class="animated fadeIn" data-box="2">
+            <img src={% static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} alt />
+          </div>
+          <div class="animated fadeIn" data-box="5">
+            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} alt />
+          </div>
+          <div class="animated fadeIn" data-box="3">
+            <img src={% static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} alt />
+          </div>
+          <div class="animated fadeIn" data-box="4">
+            <img src={% static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} alt />
+          </div>
+        </div>
+      </div>
+      <div class="grid-col grid-col-6">
+        <h2>We Offer</h2>
+        <p>
+          Curriculum that is provided by educational systems as vex.<br />
+          we share our practical Knowledge with the students, teach to them
+          how to work in a team.<br />
+          Learn in a competitive way to increase the fun and the need to focus
+          during the session.<br />
+          Participate in different competitions to do what we learn, improve
+          there skills like presentation skills and enjoy this experiment.
+        </p>
+        <div class="tabs-box">
+          <a href="#vd" data-boxs-tab="1" class="active">Education</a>
+          <a href="#dvd" data-boxs-tab="2">Knowledge</a>
+          <a href="#accddvd" data-boxs-tab="5">Teamwork</a>
+          <a href="#cddv" data-boxs-tab="3">Competition</a>
+          <a href="#ccddv" data-boxs-tab="4">Fun</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / paralax section -->
+<hr class="divider-color" />
+<!-- paralax section -->
+<section class="fullwidth-background padding-section">
+  <div class="grid-row clear-fix">
+    <h2 class="center-text">About Us</h2>
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-6">
+        <h3>Why We Are Better</h3>
+        <p>
+          We spend more time with the students and make them build the robots
+          and do programming after they learn with them selves.
+        </p>
+        <!-- accordions -->
+        <div class="accordions">
+          <!-- content-title -->
+          <div class="content-title active">
+            Our vision
+          </div>
+          <!--/content-title -->
+          <!-- accordions content -->
+          <div class="content">
+            <p>
+              Our goal is for STEM Robotics Education to be recognized by the educational community as a national leader
+              in program-based learning and STEM training.</br>
+              Our students who graduate from our courses , have the desire to continue their studies in Science in the
+              field of STEM.</p>
+            <p>
+              Over time,Willy Robotics Academy will explore innovative teaching methods but will also seek
+              collaborations
+              with other Educational and Research bodies.
+              Our learning space exudes an atmosphere that resembles a industry science lab and provides students with
+              an
+              environment where they can learn and create. In this space, Willy Robotics Academy hosts schools, where
+              visitors learn from our trainers about STEM Science-Based Learning. Our laboratories have the latest
+              educational technology (3D printers, Robotic Kits).
+            </p>
+          </div>
+          <!--/accordions content -->
+          <!-- content-title -->
+          <div class="content-title">
+            Our educational values
+          </div>
+          <!--/content-title -->
+          <!-- accordions content -->
+          <div class="content">
+            <p>The following values represent the guiding principles we use in our Academy to achieve our goals:
+            <ul>
+              <li>
+                Research
+              </li>
+              <li>
+                Contact
+              </li>
+              <li>
+                Cooperation
+              </li>
+              <li>
+                Creativity
+              </li>
+            </ul>
+
+            Based on these four areas, Willy Robotics Academy will seek to provide learning opportunities based on
+            project-based and hands-on training.
+            We constantly appreciate the diversity of our departments and adapt our lessons to each student, in line
+            with their interests and skills
+            We support and encourage our students to create and develop expectations based on strengths or even
+            weaknesses, different educational backgrounds and personalities.
+            </p>
+          </div>
+          <!--/accordions content -->
+          <!-- content-title -->
+          <div class="content-title">
+            Our educational goals
+          </div>
+          <!--/content-title -->
+          <!-- accordions content -->
+          <div class="content">
+            <p>
+              At Willy Robotics Academy we aim to create an innovative educational space, open to society, by
+              cultivating
+              an open collaborative culture.</p>
+            <p>
+              Objective 1: Increase students' interest in science education covered by STEM, by creating and enhancing
+              STEM-related curricula.
+            </p>
+            <p>
+              Objective 2: Provide opportunities for students to discover educational interests, explore their future
+              career paths and create plans for their future.
+            </p>
+            <p>
+              Objective 3: Adopt an educational plan that supports student learning, well-being based on five key
+              points:
+              Persistence, Research, Communication, Collaboration and Creativity.
+            </p>
+            <p>
+              Objective 4: Continue to create and improve alternative assessments to measure student learning.
+            </p>
+          </div>
+          <!--/accordions content -->
+
+          <!--/accordions content -->
+        </div>
+        <!--/accordions -->
+
+      </div>
+      <div class="grid-col grid-col-6">
+        <div class="owl-carousel full-width-slider">
+          <div class="gallery-item picture">
+            <img src={% static 'home/img/Slideshow/Ninja Warriors/NW-Comp-13(C).jpg' %} data-at2x={%
+              static 'home/img/Slideshow/Ninja Warriors/NW-Comp-13(C).jpg' %} alt />
+          </div>
+          <div class="gallery-item picture">
+            <img src={% static 'home/img/Slideshow/Vex/Vex Championship/Vex-comp-3.jpg' %} data-at2x={%
+              static 'home/img/Slideshow/Vex/Vex Championship/Vex-comp-3.jpg' %} alt />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- paralax section -->
+<hr class="divider-color" />
+
+
+<!-- section -->
+<section class="grid-row clear-fix padding-section">
+  <h2 class="center-text">Our Teachers</h2>
+  <div class="grid-col-row">
+    <div class="grid-col grid-col-6">
+      {% for teacher in teachers %}
+      <div class="item-instructor bg-color-{{forloop.counter}}">
+        <a href="#" class="instructor-avatar">
+          <img src={{teacher.image.url}} data-at2x={{teacher.image.url}} alt />
+        </a>
+        <div class="info-box">
+          <h3>{{teacher.name}}</h3>
+          <span class="instructor-profession">{{teacher.specialization}}</span>
+          <div class="divider"></div>
+          <p>
+            {% if teacher.quotes != "Null" %}
+            {{teacher.quotes}}
+            {% endif %}
+
+          </p>
+          <div class="social-link">
+
+            {% if teacher.facebook != "Null" %}
+            <a href="{{teacher.facebook}}" class="fa fa-facebook"></a>
+            {% endif %}
+            {% if teacher.google != "Null" %}
+            <a href="{{teacher.google}}" class="fa fa-google-plus"></a>
+            {% endif %}
+            {% if teacher.twitter != "Null" %}
+            <a href="{{teacher.google}}" class="fa fa-twitter"></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+</section>
+<!-- / section -->
+<hr class="divider-color" />
+<!-- section -->
+<section class="padding-section">
+  <div class="grid-row clear-fix">
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-6">
+        <div class="video-player">
+          <iframe src="https://www.youtube.com/embed/Cqk5fLSP8tg"></iframe>
+        </div>
+      </div>
+      <div class="grid-col grid-col-6 clear-fix">
+        <h2>Learn More About Us From Video</h2>
+        <p>
+          Our team includes teachers, researchers, engineers, but also professionals and interest in STEM (Science,
+          Technology, Engineering, Mathematics) and Educational Robotics.
+          Willy Robotics offers a range of Stem robotics courses for students we train the next generation of
+          scientists, engineers, designers, innovative builders and entrepreneurs.
+        </p>
+        <p>
+          Our students are trained in solving complex problems by using innovative teaching methods, advanced
+          technological equipment and through STEM Field Sciences. As part of the education, students implement projects
+          and participate in festivals, conferences, competitions.
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <!--
+          <a
+            href="page-about-us.html"
+            class="
+              cws-button
+              bt-color-3
+              border-radius
+              alt
+              icon-right
+              float-right
+            "
+            >Watch More<i class="fa fa-angle-right"></i
+          ></a>-->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / section -->
+
+<!-- section -->
+
+<!-- / section -->
+<hr class="divider-color" />
+
+
+</div>
+<!-- / content -->
+
+{% endblock content %}

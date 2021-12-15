@@ -1,0 +1,184 @@
+{% extends 'admin/admin-home.html' %} {% block content %}
+<div class="page-content">
+  <div class="container clear-fix form-bg">
+    <div class="grid-col-row">
+      <div class="grid-col grid-col-9" style="width: 100%">
+        <h2>Courses Table</h2>
+        <table style="border-collapse: collapse; width: 100%">
+          <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Course name
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Minimum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Maximum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Price
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date created
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date modified
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status
+            </th>
+          </tr>
+          {% for course in courses %}
+
+          <tr>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              <a href ="{% url 'course' course.id %}">{{course.name}}</a>
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.min_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.max_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.price}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.date_created|date:'Y-m-d' }}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.date_update|date:'Y-m-d' }}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.status}}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="grid-col grid-col-9" style="width: 100%; margin-top:30px;">
+        <h2>Competition Table</h2>
+        <table style="border-collapse: collapse; width: 100%">
+          <tr>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Competition name
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Minimum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Maximum age
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Fees
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date created
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Date modified
+            </th>
+            <th
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              Status
+            </th>
+          </tr>
+          {% for course in competition %}
+
+          <tr>
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              <a href ="{% url 'competition' course.id %}">{{course.name}}</a>
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.min_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.max_age}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.price}}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.date_created|date:'Y-m-d' }}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.date_update|date:'Y-m-d' }}
+            </td>
+
+            <td
+              style="border: 1px solid #dddddd; text-align: left; padding: 8px"
+            >
+              {{course.status}}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

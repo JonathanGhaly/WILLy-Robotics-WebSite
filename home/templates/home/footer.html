@@ -1,0 +1,74 @@
+{% load static %}
+<footer>
+
+
+  <div class="grid-row-footer">
+    <div class="grid-col-row clear-fix">
+      <section class="grid-col grid-col-8 footer-about">
+        <h2 class="corner-radius">About Us</h2>
+        <div>
+          <h3>What we offer</h3>
+          <p>
+            Willy Robotics offers a range of Stem robotics courses for students we train the next generation of scientists, engineers, designers, innovative builders and entrepreneurs.
+          </p>
+        </div>
+        <address>
+          <p></p>
+          <a href="tel:+201210875133" class="phone-number">+201210875133</a>
+          <br />
+          <a href="mailto:willyroboticsacademy@gmail.com" class="email">willyroboticsacademy@gmail.com</a>
+          <br />
+         
+          <a
+            href="https://www.google.com/maps/dir//Willy+Robotics+Academy,+Unnamed+Road,+Giza+Governorate/@29.9657567,31.0894066,17z/data=!4m16!1m6!3m5!1s0x14584f0c61df7573:0x1f8b9f5cda60152f!2sWilly+Robotics+Academy!8m2!3d29.9657521!4d31.0916006!4m8!1m0!1m5!1m1!1s0x14584f0c61df7573:0x1f8b9f5cda60152f!2m2!1d31.0916006!2d29.9657521!3e3"
+            class="address"
+            >٢٨٥ ل بوابه مينا حدائق الاهرام, Giza Governorate, Egypt 8655</a
+          >
+        </address>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/WillyRoboticsAcademy"
+            class="fa fa-facebook"
+          ></a>
+          <a
+            href="https://www.instagram.com/willy_robotics_academy/"
+            class="fa fa-instagram"
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCmwihA0n1uaUEQtYS70crDg"
+            class="fa fa-youtube"
+          ></a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!--  footer -->
+  <div class="footer-bottom">
+    <div class="grid-row clear-fix">
+      <div class="copyright">
+        WillyRoboicsAcademy<span></span> 2021 . All Rights Reserved
+      </div>
+      <nav class="footer-nav">
+       <ul class="clear-fix">
+            <li>
+              <a href={% url 'home' %}  >Home</a>
+            </li>
+            <li>
+              <a href={% url 'course-list' %} >Courses</a>
+            </li>
+            <li>
+              <a href={% url 'competition-list' %} >competitions</a>
+            </li>
+             <li>
+              <a href={% url 'gallery' %} >Gallery</a>
+            </li>
+            <li>
+              <a href={% url 'Apply' %} >Join now</a>
+            </li>
+      
+          </ul>
+      </nav>
+    </div>
+
+</footer>
+<!-- / footer -->
