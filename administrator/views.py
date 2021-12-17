@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from courses.views import competition
 from .decorators import unauthenticated_user, allowed_user
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -106,12 +108,12 @@ def DeleteCourse(request, pk):
 
 @login_required(login_url='login')
 def DeleteComp(request, pk):
-    course = Competition.objects.get(id=pk)
-    if request.method == 'POST':
-        course.delete()
+    competition = Competition.objects.get(id=pk)
+    if request.method == 'GET':
+        competition.delete()
         return redirect('home')
     context = {
-        'course': course
+        'competition': competition
     }
     return render(request, 'admin/delete-comp.html', context)
 
