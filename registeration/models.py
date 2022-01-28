@@ -1,6 +1,7 @@
 from django.db import models
 from courses.models import Competition, Course
 from django.utils.timezone import now
+from django.core.exceptions import FieldDoesNotExist
 
 # Create your models here.
 
