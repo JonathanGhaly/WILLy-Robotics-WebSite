@@ -7,14 +7,14 @@ from registeration.models import CourseRegisteration, CompetitionRegisteration
 def home(request):
     teachers = Teacher.objects.all()
     coursesNum = Course.objects.all().count()
-    # if(coursesNum > 0):
-    #     course = Course.objects.get(id=1)
-    # else:
-    #     course = NotImplemented
+    if(coursesNum > 0):
+         course = Course.objects.all()[:1].get()
+    else:
+         course = NotImplemented
     registerationNum = CourseRegisteration.objects.all().count
 
     context = {
-   #     'course': course,
+        'course': course,
         'coursesNum': coursesNum,
         'registerationNum': registerationNum,
         'teachers': teachers
