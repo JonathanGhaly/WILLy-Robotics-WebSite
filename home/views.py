@@ -8,7 +8,7 @@ def home(request):
     teachers = Teacher.objects.all()
     coursesNum = Course.objects.all().count()
     if(coursesNum > 0):
-         course = Course.objects.all()[:1].get()
+         course = Course.objects.get()
     else:
          course = NotImplemented
     registerationNum = CourseRegisteration.objects.all().count

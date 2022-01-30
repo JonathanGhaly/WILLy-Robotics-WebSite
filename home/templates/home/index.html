@@ -95,7 +95,7 @@
         <div class="picture">
           <div class="hover-effect"></div>
           <div class="link-cont">
-            {%for course in courses%}
+            {% for course in courses %}
             {% if forloop.first %}
 
             <a href={% url 'course' course.id %} class="fancy fa fa-search"></a>
