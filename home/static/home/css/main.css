@@ -1150,6 +1150,7 @@ header:before{
 }
 .page-header-top address a {
 	line-height: 40px;
+	margin-right: 10px;
 	white-space: nowrap;
 }
 .header-top-panel {
@@ -1169,7 +1170,7 @@ header:before{
 }
 .page-header-top address .phone-number i,
 .page-header-top address .email i{
-	margin-left: 10px;
+	margin-left: 0px;
 	margin-right: 10px;
 	display: inline-block;
 	width: 18px;
