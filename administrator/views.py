@@ -49,7 +49,7 @@ def AddCompetition(request):
             form.save()
             return redirect('coursetable')
     context = {'forms': form}
-    return render(request, 'admin\competition-add.html', context)
+    return render(request, 'admin/competition-add.html', context)
 
 
 @login_required(login_url='login')
