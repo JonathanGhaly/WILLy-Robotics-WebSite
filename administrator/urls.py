@@ -17,12 +17,13 @@ urlpatterns = [
     path('add_image/', views.AddImageGal, name='add-image'),
     path('add_competition/', views.AddCompetition, name='add-competition'),
     path('delete-course/<str:pk>/', views.DeleteCourse, name="delete-course"),
+    path('delete-competition/<str:pk>/', views.DeleteComp, name="delete-comp"),
+
     path('student-course/<str:pk>/',
          views.RegisterSingleView, name="student-course"),
     path('student-competition/<str:pk>/',
          views.RegisterCompSingleView, name="student-competition"),
 
-    path('delete-competition/<str:pk>/', views.DeleteComp, name="delete-comp"),
 
 
 ]

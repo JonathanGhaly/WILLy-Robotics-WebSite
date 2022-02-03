@@ -5,8 +5,8 @@
   <div class="tp-banner-slider">
     <ul>
       <li data-masterspeed="700">
-        <img src={% static 'home/img/Slideshow/Ev3/EV3-course-1.jpg' %} alt>
-        <div class="tp-caption sl-content align-left" data-x="['left','center','center','center']" data-hoffset="20"
+        <img src={% static 'home/img/Slideshow/Ev3/EV3-course-1.jpg' %}>
+        <div class="tp-caption sl-content align-left" data-x="['left','center','center','center']" data-hoffset="50"
           data-y="center" data-voffset="0" data-width="['720px','600px','500px','300px']"
           data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
           data-start="400">
@@ -37,7 +37,7 @@
 
       <li data-masterspeed="700" data-transition="fade">
         <img src={% static 'home/img/Slideshow/Nursery/Nur-1.jpg' %} alt>
-        <div class="tp-caption sl-content align-center" data-x="right right" data-hoffset="0" data-y="top"
+        <div class="tp-caption sl-content align-center" data-x="right right" data-hoffset="10" data-y="top"
           data-voffset="0" data-width="['720px','600px','500px','300px']"
           data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:300;s:1000;"
           data-start="400" style="margin-top:50px;">
@@ -95,7 +95,7 @@
         <div class="picture">
           <div class="hover-effect"></div>
           <div class="link-cont">
-            {% for course in courses %}
+            {% for course in courses%}
             {% if forloop.first %}
 
             <a href={% url 'course' course.id %} class="fancy fa fa-search"></a>
@@ -178,7 +178,7 @@
       <div class="grid-col grid-col-3 alt">
         <div class="counter-block last">
           <i class="flaticon-calendar"></i>
-          <div class="counter" data-count="{{competitionNum}}">0</div>
+          <div class="counter" data-count="{{compNum}}">0</div>
           <div class="counter-name">Competitions</div>
         </div>
       </div>
@@ -256,24 +256,19 @@
       <div class="grid-col grid-col-6">
         <div class="boxs-tab">
           <div class="animated fadeIn active" data-box="1">
-            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} data-at2x={% static 'home/img/Slideshow/WEDO/Wedo-course-16.jpg' %} alt />
           </div>
           <div class="animated fadeIn" data-box="2">
-            <img src={% static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} data-at2x={% static 'home/img/Slideshow/Scratch/Scratch-course-2.jpg' %} alt />
           </div>
           <div class="animated fadeIn" data-box="5">
-            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} data-at2x={% static 'home/img/Slideshow/WEDO/Wedo-course-10.jpg' %} alt />
           </div>
           <div class="animated fadeIn" data-box="3">
-            <img src={% static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} data-at2x={% static 'home/img/Slideshow/Nursery/Nur-4.jpg' %} alt />
           </div>
           <div class="animated fadeIn" data-box="4">
-            <img src={% static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} data-at2x={% static 'home/img/Slideshow/EV3-FLL/FLL-2.jpg' %} alt />
           </div>
         </div>
       </div>
@@ -408,12 +403,10 @@
       <div class="grid-col grid-col-6">
         <div class="owl-carousel full-width-slider">
           <div class="gallery-item picture">
-            <img src={% static 'home/img/Slideshow/Ninja Warriors/NW-Comp-13(C).jpg' %} data-at2x={%
-              static 'home/img/Slideshow/Ninja Warriors/NW-Comp-13(C).jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/Ninja_Warriors/NW-Comp-13(C).jpg' %} data-at2x={% static 'home/img/Slideshow/Ninja_Warriors/NW-Comp-13(C).jpg' %} alt />
           </div>
           <div class="gallery-item picture">
-            <img src={% static 'home/img/Slideshow/Vex/Vex Championship/Vex-comp-3.jpg' %} data-at2x={%
-              static 'home/img/Slideshow/Vex/Vex Championship/Vex-comp-3.jpg' %} alt />
+            <img src={% static 'home/img/Slideshow/Vex/Vex_Championship/Vex-comp-3.jpg' %} data-at2x={% static 'home/img/Slideshow/Vex/Vex_Championship/Vex-comp-3.jpg' %} alt />
           </div>
         </div>
       </div>
@@ -422,9 +415,8 @@
 </section>
 <!-- paralax section -->
 <hr class="divider-color" />
-
-
 <!-- section -->
+<!--
 <section class="grid-row clear-fix padding-section">
   <h2 class="center-text">Our Teachers</h2>
   <div class="grid-col-row">
@@ -461,8 +453,8 @@
       {% endfor %}
 
 </section>
+-->
 <!-- / section -->
-<hr class="divider-color" />
 <!-- section -->
 <section class="padding-section">
   <div class="grid-row clear-fix">

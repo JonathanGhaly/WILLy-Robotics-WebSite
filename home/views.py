@@ -1,21 +1,20 @@
 from django.shortcuts import render
-from courses.models import Course, Teacher
+from courses.models import Competition, Course, Teacher
 from registeration.models import CourseRegisteration, CompetitionRegisteration
 # Create your views here.
 
 
 def home(request):
     teachers = Teacher.objects.all()
+    course = Course.objects.all()
     coursesNum = Course.objects.all().count()
-    if(coursesNum > 0):
-         course = Course.objects.get()
-    else:
-         course = NotImplemented
     registerationNum = CourseRegisteration.objects.all().count
+    compNum=Competition.objects.all().count()
 
     context = {
-        'course': course,
+        'courses': course,
         'coursesNum': coursesNum,
+        'compNum':compNum,
         'registerationNum': registerationNum,
         'teachers': teachers
 

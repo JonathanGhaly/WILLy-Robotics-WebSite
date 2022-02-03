@@ -49,7 +49,9 @@ class CompetitionForm(forms.ModelForm):
 
     class Meta:
         model = Competition
-        fields = '__all__'
+        fields = ['name', 'long_description', 'short_description',
+        'fees', 'min_age', 'max_age','date_of_event',
+        'student_number', 'cover_image', 'list_image']
         widgets = {
             'date_of_event': DateInput(),
 

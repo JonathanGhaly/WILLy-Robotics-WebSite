@@ -109,7 +109,7 @@ def DeleteCourse(request, pk):
 @login_required(login_url='login')
 def DeleteComp(request, pk):
     competition = Competition.objects.get(id=pk)
-    if request.method == 'GET':
+    if request.method == 'POST':
         competition.delete()
         return redirect('home')
     context = {
