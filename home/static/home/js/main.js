@@ -2035,6 +2035,5 @@ function cws_top_social_init() {
   });
 }
 if(screen.width <= 425){
-    document.getElementById("#footer-text-id").style.paddingLeft = "10%";
     document.getElementById("#footer-text-id").style.width = screen.width;
 }
