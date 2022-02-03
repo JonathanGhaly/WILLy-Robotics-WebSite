@@ -2034,6 +2034,7 @@ function cws_top_social_init() {
     }
   });
 }
-if(screen.width <= 425){
-    document.getElementById("#footer-text-id").style.width = screen.width;
+if($(window).width()<= 425){
+    document.getElementById("#footer-text-id").style.width = $(window).width();
+
 }
