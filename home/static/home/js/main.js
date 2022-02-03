@@ -2034,7 +2034,13 @@ function cws_top_social_init() {
     }
   });
 }
-if($(window).width()<= 425){
-    document.getElementById("#footer-text-id").style.width = $(window).width();
-
+var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+    if(x<= 425){
+    document.getElementById("#footer-text-id").style.width = x;
+    
 }
